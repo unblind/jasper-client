@@ -222,7 +222,8 @@ class Mic:
         frames = []
         # increasing the range # results in longer pause after command
         # generation
-        lastN = [THRESHOLD * 1.2 for i in range(30)]
+        # guido increase to range(60), see https://groups.google.com/forum/#!searchin/jasper-support-forum/guido/jasper-support-forum/xkKe7AhjJCE/eBD-TK-hEwAJ
+        lastN = [THRESHOLD * 1.2 for i in range(60)]
 
         for i in range(0, RATE / CHUNK * LISTEN_TIME):
 
